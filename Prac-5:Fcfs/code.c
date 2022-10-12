@@ -19,8 +19,8 @@ CODE:
   
  int comparator (const void *p, const void *q)  
  { 
-     struct process p1 = (struct process) p; 
-     struct process p2 = (struct process) q;  
+     struct process *p1 = (struct process *) p; 
+     struct process *p2 = (struct process *) q;  
   
      if (p1->at >= p2->at) 
      return 1;  
